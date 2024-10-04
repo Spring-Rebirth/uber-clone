@@ -1,10 +1,11 @@
 // cSpell:words nativewind
-import { plugins } from "./tailwind.config";
+const { plugins, presets } = require("./tailwind.config");
 
-export default function (api) {
+module.exports = function (api) {
   api.cache(true);
   return {
     presets: ['babel-preset-expo'],
     plugins: ["nativewind/babel"],
   };
 };
+
