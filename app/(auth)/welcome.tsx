@@ -8,7 +8,7 @@ import {onboarding} from "@/types/constants";
 export default function Onboarding() {
     const swiperRef = useRef<Swiper>(null);
 
-   return (
+    return (
       <SafeAreaView className="h-full items-center">
          <TouchableOpacity
             className='w-full justify-end items-end p-5'
@@ -22,6 +22,13 @@ export default function Onboarding() {
          </TouchableOpacity>
          <Swiper
             ref={swiperRef}
+            loop={false}
+            dot={
+             <View className={'w-[32] h-[4] mx-1 bg-[#E2E8F0] rounded-full'} />
+            }
+            activeDot={
+             <View className={'w-[32] h-[4] mx-1 bg-[#0286FF] rounded-full '} />
+            }
          >
              {onboarding.map(item => (
                  <View
@@ -38,5 +45,5 @@ export default function Onboarding() {
 
          </Swiper>
       </SafeAreaView>
-   );
+    );
 }
