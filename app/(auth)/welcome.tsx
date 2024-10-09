@@ -2,7 +2,6 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import {useRef} from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { router } from "expo-router";
-import onboarding1 from '@/assets/images/onboarding1.png';
 import Swiper from 'react-native-swiper';
 import {onboarding} from "@/types/constants";
 
